@@ -39,7 +39,7 @@ export function Hero() {
 
       <Container className="relative z-10 text-center">
         <FadeIn variant="fadeInScale" duration={0.8}>
-          <h1 className="logo-font text-6xl md:text-8xl mb-3 text-foreground tracking-wider">
+          <h1 className="logo-font text-5xl md:text-8xl mb-3 text-foreground tracking-wider whitespace-nowrap">
             {siteConfig.business.name}
           </h1>
           <p className="logo-font text-2xl md:text-3xl text-primary-500 mb-6 tracking-wider">
