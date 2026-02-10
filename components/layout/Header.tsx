@@ -1,8 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { siteConfig } from "@/config/site";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X, Scissors } from "lucide-react";
