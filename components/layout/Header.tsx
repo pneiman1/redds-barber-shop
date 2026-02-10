@@ -49,24 +49,12 @@ export function Header() {
       }`}
     >
       <Container>
-        <nav className="relative flex items-center justify-center py-4">
+        <nav className="flex items-center justify-between py-4">
           {/* Left: Scissors Icon */}
-          <div className="absolute left-0">
-            <Scissors className="w-8 h-8 text-white" strokeWidth={2} />
-          </div>
-
-          {/* Center: Title and Location */}
-          <div className="flex flex-col items-center text-center">
-            <span className="logo-font text-3xl text-primary-500 tracking-wider leading-tight">
-              {siteConfig.business.name}
-            </span>
-            <span className="text-xs text-white tracking-wide">
-              Pacific Beach, San Diego
-            </span>
-          </div>
+          <Scissors className="w-8 h-8 text-white" strokeWidth={2} />
 
           {/* Right: Navigation (Desktop) or Menu (Mobile) */}
-          <div className="absolute right-0 hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
@@ -86,7 +74,7 @@ export function Header() {
           </div>
 
           <button
-            className="absolute right-0 md:hidden text-foreground"
+            className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
