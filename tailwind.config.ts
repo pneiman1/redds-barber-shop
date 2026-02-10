@@ -18,9 +18,9 @@ const config: Config = {
           muted: '#a1a1aa',
         },
         primary: {
-          500: '#4a0f0f',
-          600: '#3d0c0c',
-          700: '#2d0909',
+          500: '#8b1515',
+          600: '#5a1111',
+          700: '#3d0c0c',
         },
         accent: {
           500: '#eab308',
@@ -32,6 +32,7 @@ const config: Config = {
         'fade-in-up': 'fadeInUp 0.6s ease-out',
         'fade-in-scale': 'fadeInScale 0.6s ease-out',
         'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+        'shimmer': 'shimmer 3.5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -47,12 +48,16 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(74, 15, 15, 0.5)' },
-          '50%': { boxShadow: '0 0 30px rgba(74, 15, 15, 0.8)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(90, 17, 17, 0.5)' },
+          '50%': { boxShadow: '0 0 30px rgba(90, 17, 17, 0.8)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
         },
       },
       boxShadow: {
-        'glow-red': '0 0 20px rgba(74, 15, 15, 0.5)',
+        'glow-red': '0 0 20px rgba(90, 17, 17, 0.5)',
         'glow-gold': '0 0 20px rgba(234, 179, 8, 0.5)',
       },
     },

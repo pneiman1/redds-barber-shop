@@ -28,7 +28,7 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-primary-500 hover:bg-primary-600 text-white shadow-glow-red hover:shadow-glow-red hover:scale-105",
+      "bg-primary-500 hover:bg-primary-600 text-white shadow-lg shadow-black/50 hover:shadow-xl hover:shadow-black/60 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/15 before:to-transparent before:animate-shimmer before:bg-[length:200%_100%]",
     secondary:
       "bg-accent-500 hover:bg-accent-600 text-background shadow-glow-gold hover:shadow-glow-gold hover:scale-105",
     outline:
