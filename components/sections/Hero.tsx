@@ -34,7 +34,7 @@ export function Hero() {
         {/* Gradient Overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80" />
         {/* Subtle red glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(220,38,38,0.15)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(185,28,28,0.15)_0%,transparent_70%)]" />
       </div>
 
       <Container className="relative z-10 text-center">
@@ -71,7 +71,7 @@ export function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.05, borderColor: "rgba(220, 38, 38, 0.6)" }}
+                whileHover={{ scale: 1.05, borderColor: "rgba(185, 28, 28, 0.6)" }}
               >
                 <Image
                   src={image.src}
