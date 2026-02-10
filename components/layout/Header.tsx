@@ -5,10 +5,12 @@ import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
@@ -25,6 +27,7 @@ export function Header() {
   }, []);
 
   const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
       const headerOffset = 100; // Account for fixed header height
@@ -46,8 +49,7 @@ export function Header() {
       }`}
     >
       <Container>
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between py-4">
           <a
             href="#"
             className="logo-font text-3xl text-primary-500 hover:text-primary-600 transition-colors tracking-wider"
@@ -55,7 +57,7 @@ export function Header() {
             {siteConfig.business.name}
           </a>
 
-          <div className="flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
@@ -73,18 +75,46 @@ export function Header() {
               Book Now
             </Button>
           </div>
+
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </nav>
 
-        {/* Mobile Header */}
-        <div className="md:hidden py-4 text-center">
-          <div className="logo-font text-2xl text-primary-500 tracking-wider">
-            {siteConfig.business.name}
-          </div>
-          <div className="logo-font text-sm text-white tracking-wide">
-            Pacific Beach, San Diego
-          </div>
-        </div>
-
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden pb-4"
+          >
+            <div className="flex flex-col gap-4">
+              {NAV_LINKS.map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-foreground hover:text-primary-500 transition-colors font-medium text-left"
+                >
+                  {link.label}
+                </button>
+              ))}
+              <Button
+                variant="primary"
+                size="md"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  window.open(siteConfig.booksy.url, '_blank');
+                }}
+                className="w-full"
+              >
+                Book Now
+              </Button>
+            </div>
+          </motion.div>
+        )}
       </Container>
     </motion.header>
   );
