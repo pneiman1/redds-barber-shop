@@ -87,7 +87,7 @@ export const siteConfig = {
     },
   ],
   social: {
-    instagram: "https://instagram.com/reddsbarbershoppbd",
+    instagram: "https://www.instagram.com/redds_barbershop/",
     facebook: "https://facebook.com/reddsbarbershoppbd",
     yelp: "https://yelp.com/biz/redds-barber-shop-pbd",
   },
