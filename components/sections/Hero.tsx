@@ -42,7 +42,7 @@ export function Hero() {
             {siteConfig.business.name}
           </h1>
           <p className="logo-font text-2xl md:text-3xl text-primary-500 mb-6 tracking-wider">
-            Pacific Beach - San Diego
+            Pacific Beach, San Diego
           </p>
         </FadeIn>
 
