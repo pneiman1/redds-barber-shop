@@ -1,0 +1,106 @@
+export const siteConfig = {
+  business: {
+    name: "Redd's Barber Shop",
+    tagline: "Premium Grooming Experience",
+    description: "Experience premium grooming services at San Diego's finest barbershop. Expert cuts, traditional shaves, and modern styling in a classic atmosphere.",
+    address: {
+      street: "1738 Garnet Ave",
+      city: "San Diego",
+      state: "CA",
+      zip: "92109",
+      country: "United States",
+    },
+    phone: "(858) 483-1514",
+    email: "info@reddsbarbershop.com",
+    hours: {
+      monday: "9:00 AM - 7:00 PM",
+      tuesday: "9:00 AM - 7:00 PM",
+      wednesday: "9:00 AM - 7:00 PM",
+      thursday: "9:00 AM - 7:00 PM",
+      friday: "9:00 AM - 7:00 PM",
+      saturday: "9:00 AM - 6:00 PM",
+      sunday: "10:00 AM - 5:00 PM",
+    },
+    rating: {
+      value: 4.5,
+      count: 80,
+    },
+    coordinates: {
+      latitude: 32.7966,
+      longitude: -117.2526,
+    },
+  },
+  domain: "reddsbarbershoppbd.com",
+  url: "https://reddsbarbershoppbd.com",
+  booksy: {
+    url: "https://booksy.com/en-us/1704442_redd-s-barber-shop_other_134656_san-diego#ba_s=ad_1",
+    widgetId: "1704442",
+  },
+  services: [
+    {
+      id: "signature-cut",
+      name: "Signature Haircut",
+      description: "Premium haircut with consultation, wash, cut, and style. Tailored to your unique style and preferences.",
+      price: "$45",
+      duration: "45 min",
+      popular: true,
+    },
+    {
+      id: "beard-trim",
+      name: "Beard Trim & Shape",
+      description: "Expert beard grooming with hot towel treatment, precise trimming, and styling.",
+      price: "$30",
+      duration: "30 min",
+      popular: false,
+    },
+    {
+      id: "traditional-shave",
+      name: "Traditional Hot Shave",
+      description: "Classic straight razor shave with hot towels, pre-shave oil, and post-shave balm.",
+      price: "$40",
+      duration: "40 min",
+      popular: true,
+    },
+    {
+      id: "haircut-beard",
+      name: "Haircut & Beard Combo",
+      description: "Complete grooming experience combining our signature haircut with beard trim.",
+      price: "$65",
+      duration: "60 min",
+      popular: true,
+    },
+    {
+      id: "kids-cut",
+      name: "Kids Haircut",
+      description: "Professional haircut for children 12 and under in a fun, welcoming environment.",
+      price: "$30",
+      duration: "30 min",
+      popular: false,
+    },
+    {
+      id: "hair-color",
+      name: "Hair Color",
+      description: "Professional hair coloring services including full color, highlights, and gray coverage.",
+      price: "$60+",
+      duration: "60 min",
+      popular: false,
+    },
+  ],
+  social: {
+    instagram: "https://instagram.com/reddsbarbershoppbd",
+    facebook: "https://facebook.com/reddsbarbershoppbd",
+    yelp: "https://yelp.com/biz/redds-barber-shop-pbd",
+  },
+  seo: {
+    keywords: [
+      "barbershop san diego",
+      "mens haircut san diego",
+      "traditional shave",
+      "beard trim",
+      "carmel valley barbershop",
+      "premium grooming",
+    ],
+  },
+};
+
+export type SiteConfig = typeof siteConfig;

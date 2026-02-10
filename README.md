@@ -1,36 +1,236 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Redd's Barber Shop PBD - Next.js Template
+
+A production-ready Next.js 14 barbershop website template featuring a modern dark theme with red/gold accents, Booksy integration for appointments, and comprehensive SEO optimization.
+
+## Features
+
+- 🎨 **Modern Dark Theme** - Custom Tailwind CSS theme with red and gold accents
+- 📱 **Fully Responsive** - Mobile-first design that works on all devices
+- ⚡ **Performance Optimized** - Fast page loads with Next.js 14 App Router
+- 🎭 **Smooth Animations** - Framer Motion for professional animations
+- 📅 **Booksy Integration** - Embedded booking widget for easy appointments
+- 🔍 **SEO Optimized** - Comprehensive metadata and JSON-LD structured data
+- 🚀 **Vercel Ready** - Optimized for deployment to Vercel
+- 🎯 **Template Ready** - Easy to customize for any barbershop
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd booksy-template
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Copy the environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Update the environment variables in `.env.local`:
+```env
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_BOOKSY_URL=https://booksy.com/YOUR_BOOKSY_URL
+NEXT_PUBLIC_BUSINESS_NAME=Your Barber Shop Name
+```
 
-## Learn More
+5. Start the development server:
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization Guide
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1. Business Configuration
 
-## Deploy on Vercel
+Edit `config/site.ts` to update all business information:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+export const siteConfig = {
+  business: {
+    name: "Your Barber Shop Name",
+    tagline: "Your Tagline",
+    description: "Your description...",
+    address: { /* Update address */ },
+    phone: "Your phone number",
+    email: "Your email",
+    hours: { /* Update hours */ },
+  },
+  // ... update other fields
+};
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2. Theme Colors
+
+Modify `tailwind.config.ts` to change brand colors:
+
+```typescript
+colors: {
+  primary: { 500: '#your-color' }, // Change red
+  accent: { 500: '#your-color' },  // Change gold
+}
+```
+
+### 3. Images
+
+Replace images in the `public/images/` directory:
+- `hero.jpg` - Hero section background
+- `logo.png` - Business logo
+- Gallery images
+
+### 4. Services
+
+Update services in `config/site.ts`:
+
+```typescript
+services: [
+  {
+    id: "service-id",
+    name: "Service Name",
+    description: "Service description...",
+    price: "$XX",
+    duration: "XX min",
+    popular: true/false,
+  },
+  // ... more services
+]
+```
+
+### 5. Booksy Integration
+
+Update your Booksy URL in:
+- `.env.local` - NEXT_PUBLIC_BOOKSY_URL
+- `config/site.ts` - booksy.url and booksy.widgetId
+
+## Project Structure
+
+```
+booksy-template/
+├── app/
+│   ├── layout.tsx              # Root layout with SEO
+│   ├── page.tsx                # Main landing page
+│   └── globals.css             # Global styles
+├── components/
+│   ├── sections/               # Page sections
+│   │   ├── Hero.tsx
+│   │   ├── Services.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── About.tsx
+│   │   └── Contact.tsx
+│   ├── ui/                     # Reusable UI components
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Section.tsx
+│   │   ├── Container.tsx
+│   │   └── BookingWidget.tsx
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── animations/
+│       ├── FadeIn.tsx
+│       └── ScrollReveal.tsx
+├── lib/
+│   ├── utils.ts               # Utility functions
+│   ├── constants.ts           # App constants
+│   └── structured-data.ts     # JSON-LD schema
+├── config/
+│   └── site.ts                # Business configuration
+├── public/
+│   └── images/                # Static assets
+└── [config files]
+```
+
+## Building for Production
+
+1. Build the application:
+```bash
+npm run build
+```
+
+2. Test the production build locally:
+```bash
+npm run start
+```
+
+3. The build will automatically:
+   - Generate optimized static pages
+   - Create sitemap.xml
+   - Generate robots.txt
+   - Optimize images
+
+## Deployment to Vercel
+
+1. Push your code to GitHub
+
+2. Import your repository in [Vercel](https://vercel.com)
+
+3. Configure environment variables in Vercel:
+   - `NEXT_PUBLIC_SITE_URL`
+   - `NEXT_PUBLIC_BOOKSY_URL`
+
+4. Deploy!
+
+5. Add your custom domain in Vercel settings
+
+## SEO Features
+
+- ✅ Comprehensive metadata (title, description, keywords)
+- ✅ Open Graph tags for social sharing
+- ✅ Twitter Card tags
+- ✅ JSON-LD structured data (BarberShop, Organization)
+- ✅ Automatic sitemap generation
+- ✅ Robots.txt configuration
+- ✅ Semantic HTML structure
+- ✅ Mobile-friendly design
+
+## Performance Optimizations
+
+- Image optimization with next/image
+- Automatic code splitting
+- Framer Motion tree-shaking
+- Static page generation
+- Lazy loading for below-fold content
+- Font optimization
+- Compression enabled
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## License
+
+MIT License - feel free to use this template for your barbershop website.
+
+## Support
+
+For issues or questions, please create an issue in the repository.
+
+---
+
+Built with ❤️ using Next.js 14, TypeScript, and Tailwind CSS
