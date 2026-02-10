@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Scissors } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Header() {
@@ -52,9 +52,27 @@ export function Header() {
         <nav className="flex items-center justify-between py-4">
           <a
             href="#"
-            className="logo-font text-3xl text-primary-500 hover:text-primary-600 transition-colors tracking-wider"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            {siteConfig.business.name}
+            <div className="relative w-12 h-12">
+              {/* Scissors */}
+              <Scissors className="absolute top-0 left-0 w-10 h-10 text-primary-500 rotate-[-45deg]" strokeWidth={2} />
+              {/* Electric Clipper SVG */}
+              <svg
+                className="absolute top-0 left-0 w-10 h-10 text-primary-500 rotate-[45deg]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="6" y="4" width="12" height="16" rx="2" />
+                <line x1="9" y1="8" x2="15" y2="8" />
+                <line x1="9" y1="12" x2="15" y2="12" />
+                <line x1="9" y1="16" x2="15" y2="16" />
+              </svg>
+            </div>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
