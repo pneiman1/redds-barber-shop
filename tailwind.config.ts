@@ -18,9 +18,9 @@ const config: Config = {
           muted: '#a1a1aa',
         },
         primary: {
-          500: '#7f1d1d',
-          600: '#6b1515',
-          700: '#5a1212',
+          500: '#4a0f0f',
+          600: '#3d0c0c',
+          700: '#2d0909',
         },
         accent: {
           500: '#eab308',
@@ -47,12 +47,12 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(127, 29, 29, 0.5)' },
-          '50%': { boxShadow: '0 0 30px rgba(127, 29, 29, 0.8)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(74, 15, 15, 0.5)' },
+          '50%': { boxShadow: '0 0 30px rgba(74, 15, 15, 0.8)' },
         },
       },
       boxShadow: {
-        'glow-red': '0 0 20px rgba(127, 29, 29, 0.5)',
+        'glow-red': '0 0 20px rgba(74, 15, 15, 0.5)',
         'glow-gold': '0 0 20px rgba(234, 179, 8, 0.5)',
       },
     },
