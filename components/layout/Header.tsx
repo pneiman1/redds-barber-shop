@@ -54,24 +54,14 @@ export function Header() {
             href="#"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <div className="relative w-12 h-12">
-              {/* Scissors */}
-              <Scissors className="absolute top-0 left-0 w-10 h-10 text-primary-500 rotate-[-45deg]" strokeWidth={2} />
-              {/* Electric Clipper SVG */}
-              <svg
-                className="absolute top-0 left-0 w-10 h-10 text-primary-500 rotate-[45deg]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="6" y="4" width="12" height="16" rx="2" />
-                <line x1="9" y1="8" x2="15" y2="8" />
-                <line x1="9" y1="12" x2="15" y2="12" />
-                <line x1="9" y1="16" x2="15" y2="16" />
-              </svg>
+            <Scissors className="w-8 h-8 text-white" strokeWidth={2} />
+            <div className="flex flex-col">
+              <span className="logo-font text-2xl text-primary-500 tracking-wider leading-tight">
+                {siteConfig.business.name}
+              </span>
+              <span className="text-xs text-white tracking-wide">
+                Pacific Beach, San Diego
+              </span>
             </div>
           </a>
 
