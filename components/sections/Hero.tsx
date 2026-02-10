@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -44,6 +45,14 @@ export function Hero() {
           <p className="logo-font text-2xl md:text-3xl text-primary-500 mb-6 tracking-wider">
             Pacific Beach, San Diego
           </p>
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => window.open(siteConfig.booksy.url, '_blank')}
+            className="mb-6"
+          >
+            Book Now
+          </Button>
         </FadeIn>
 
         <FadeIn variant="fadeInUp" delay={0.3} duration={0.8}>
