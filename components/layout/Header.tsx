@@ -49,23 +49,24 @@ export function Header() {
       }`}
     >
       <Container>
-        <nav className="flex items-center justify-between py-4">
-          <a
-            href="#"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-          >
+        <nav className="relative flex items-center justify-center py-4">
+          {/* Left: Scissors Icon */}
+          <div className="absolute left-0">
             <Scissors className="w-8 h-8 text-white" strokeWidth={2} />
-            <div className="flex flex-col">
-              <span className="logo-font text-2xl text-primary-500 tracking-wider leading-tight">
-                {siteConfig.business.name}
-              </span>
-              <span className="text-xs text-white tracking-wide">
-                Pacific Beach, San Diego
-              </span>
-            </div>
-          </a>
+          </div>
 
-          <div className="hidden md:flex items-center gap-8">
+          {/* Center: Title and Location */}
+          <div className="flex flex-col items-center text-center">
+            <span className="logo-font text-3xl text-primary-500 tracking-wider leading-tight">
+              {siteConfig.business.name}
+            </span>
+            <span className="text-xs text-white tracking-wide">
+              Pacific Beach, San Diego
+            </span>
+          </div>
+
+          {/* Right: Navigation (Desktop) or Menu (Mobile) */}
+          <div className="absolute right-0 hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
@@ -85,7 +86,7 @@ export function Header() {
           </div>
 
           <button
-            className="md:hidden text-foreground"
+            className="absolute right-0 md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
