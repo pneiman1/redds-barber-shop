@@ -64,13 +64,6 @@ export function Header() {
                 {link.label}
               </button>
             ))}
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={() => window.open(siteConfig.booksy.url, '_blank')}
-            >
-              Book Now
-            </Button>
           </div>
 
           <button
@@ -98,17 +91,6 @@ export function Header() {
                   {link.label}
                 </button>
               ))}
-              <Button
-                variant="primary"
-                size="md"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  window.open(siteConfig.booksy.url, '_blank');
-                }}
-                className="w-full"
-              >
-                Book Now
-              </Button>
             </div>
           </motion.div>
         )}
