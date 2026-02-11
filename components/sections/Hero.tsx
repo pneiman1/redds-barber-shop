@@ -16,7 +16,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-24 md:pt-32 pb-20">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-20 md:pt-28 pb-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,7 +37,7 @@ export function Hero() {
 
       <Container className="relative z-10 text-center">
         <FadeIn variant="fadeInScale" duration={0.8}>
-          <h1 className="logo-font text-4xl sm:text-5xl md:text-8xl mb-3 text-primary-500 tracking-wider">
+          <h1 className="font-dancing text-4xl sm:text-5xl md:text-8xl mb-6 text-primary-500 tracking-wider">
             {siteConfig.business.name}
           </h1>
           <p className="logo-font text-xl sm:text-2xl md:text-3xl text-white mb-6 tracking-wider">
@@ -57,7 +57,7 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn variant="fadeInUp" delay={0.3} duration={0.8}>
-          <p className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground-muted mb-12 max-w-2xl mx-auto font-dancing">
             {siteConfig.business.tagline}
           </p>
         </FadeIn>

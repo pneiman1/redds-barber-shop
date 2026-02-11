@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
+import { Bebas_Neue, Pacifico } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { getStructuredData } from "@/lib/structured-data";
@@ -8,6 +8,12 @@ const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-bebas",
+});
+
+const pacifico = Pacifico({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-dancing",
 });
 
 export const metadata: Metadata = {
@@ -72,7 +78,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${bebasNeue.variable} antialiased`}>
+      <body className={`${bebasNeue.variable} ${pacifico.variable} antialiased`}>
         {children}
       </body>
     </html>

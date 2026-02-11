@@ -50,6 +50,10 @@ body {
     letter-spacing: 0.05em;
   }
 
+  .font-dancing {
+    font-family: var(--font-dancing), cursive;
+  }
+
   /* Booksy widget styling */
   .booksy-widget-wrapper iframe {
     border: none !important;
