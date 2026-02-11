@@ -81,8 +81,8 @@ export function Hero() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                {/* Subtle dark overlay */}
-                <div className="absolute inset-0 bg-black/30" />
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/60" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
             ))}
