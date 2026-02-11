@@ -33,8 +33,8 @@ export const siteConfig = {
   domain: "reddsbarbershoppbd.com",
   url: "https://reddsbarbershoppbd.com",
   booksy: {
-    url: "https://booksy.com/en-us/688605_redds-barber-shop-club_barber-shop_134656_san-diego#ba_s=seo",
-    widgetId: "688605",
+    url: "https://booksy.com/en-us/1704442_phil-s-barber-shop_other_134656_san-diego#ba_s=vl_1",
+    widgetId: "1704442",
   },
   services: [
     {

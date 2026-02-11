@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -39,9 +40,17 @@ export function Hero() {
           <h1 className="logo-font text-5xl md:text-8xl mb-3 text-primary-500 tracking-wider whitespace-nowrap">
             {siteConfig.business.name}
           </h1>
-          <p className="logo-font text-2xl md:text-3xl text-white mb-8 tracking-wider">
+          <p className="logo-font text-2xl md:text-3xl text-white mb-6 tracking-wider">
             San Diego, CA
           </p>
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => window.open(siteConfig.booksy.url, '_blank')}
+            className="mb-8"
+          >
+            Book Now
+          </Button>
           <div className="mb-8 w-full">
             <BooksyWidget />
           </div>
