@@ -57,7 +57,7 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn variant="fadeInUp" delay={0.3} duration={0.8}>
-          <p className="text-xl md:text-2xl text-foreground-muted mb-6 md:mb-12 max-w-2xl mx-auto font-dancing">
+          <p className="text-xl md:text-2xl text-foreground-muted mb-4 md:mb-12 max-w-2xl mx-auto font-dancing">
             {siteConfig.business.tagline}
           </p>
         </FadeIn>
