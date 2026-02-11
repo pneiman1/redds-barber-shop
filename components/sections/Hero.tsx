@@ -15,7 +15,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32 pb-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -40,7 +40,7 @@ export function Hero() {
             {siteConfig.business.name}
           </h1>
           <p className="logo-font text-2xl md:text-3xl text-white mb-6 tracking-wider">
-            Pacific Beach, San Diego
+            San Diego, CA
           </p>
           <Button
             variant="primary"
@@ -60,11 +60,11 @@ export function Hero() {
 
         {/* Gallery Grid */}
         <FadeIn variant="fadeInUp" delay={0.6} duration={0.8}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[96vw] mx-auto">
             {galleryImages.map((image, index) => (
               <motion.div
                 key={image.id}
-                className="relative aspect-video bg-background-secondary rounded-lg overflow-hidden border-2 border-primary-500/30 shadow-glow-red group cursor-pointer"
+                className="relative aspect-square bg-background-secondary rounded-lg overflow-hidden border-2 border-primary-500/30 shadow-glow-red group cursor-pointer"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
@@ -77,6 +77,8 @@ export function Hero() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
+                {/* Subtle dark overlay */}
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
             ))}

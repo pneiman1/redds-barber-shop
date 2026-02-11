@@ -4,13 +4,13 @@ export const siteConfig = {
     tagline: "Premium Grooming Experience",
     description: "Experience premium grooming services at San Diego's finest barbershop. Expert cuts, traditional shaves, and modern styling in a classic atmosphere.",
     address: {
-      street: "1738 Garnet Ave",
+      street: "4600 Lamont St",
       city: "San Diego",
       state: "CA",
       zip: "92109",
       country: "United States",
     },
-    phone: "(858) 483-1514",
+    phone: "(000) 123-4567",
     email: "info@reddsbarbershop.com",
     hours: {
       monday: "9:00 AM - 7:00 PM",
@@ -26,8 +26,8 @@ export const siteConfig = {
       count: 80,
     },
     coordinates: {
-      latitude: 32.7966,
-      longitude: -117.2526,
+      latitude: 32.7974,
+      longitude: -117.2356,
     },
   },
   domain: "reddsbarbershoppbd.com",

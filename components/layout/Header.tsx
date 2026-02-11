@@ -5,6 +5,7 @@ import { NAV_LINKS } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X, Scissors } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Clipper } from "@/components/icons/Clipper";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,12 +48,12 @@ export function Header() {
       }`}
     >
       <Container>
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between py-4 px-8 md:px-16 lg:px-24">
           {/* Left: Scissors Icon */}
           <Scissors className="w-8 h-8 text-white" strokeWidth={2} />
 
-          {/* Right: Navigation (Desktop) or Menu (Mobile) */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Center: Navigation (Desktop) */}
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
@@ -63,6 +64,9 @@ export function Header() {
               </button>
             ))}
           </div>
+
+          {/* Right: Clipper Icon (Desktop) or Menu (Mobile) */}
+          <Clipper className="hidden md:block text-white" size={32} strokeWidth={2} />
 
           <button
             className="md:hidden text-foreground"
