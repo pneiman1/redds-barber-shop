@@ -16,7 +16,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-24 md:pt-32 pb-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,10 +37,10 @@ export function Hero() {
 
       <Container className="relative z-10 text-center">
         <FadeIn variant="fadeInScale" duration={0.8}>
-          <h1 className="logo-font text-5xl md:text-8xl mb-3 text-primary-500 tracking-wider whitespace-nowrap">
+          <h1 className="logo-font text-4xl sm:text-5xl md:text-8xl mb-3 text-primary-500 tracking-wider">
             {siteConfig.business.name}
           </h1>
-          <p className="logo-font text-2xl md:text-3xl text-white mb-6 tracking-wider">
+          <p className="logo-font text-xl sm:text-2xl md:text-3xl text-white mb-6 tracking-wider">
             San Diego, CA
           </p>
           <Button
@@ -64,7 +64,7 @@ export function Hero() {
 
         {/* Gallery Grid */}
         <FadeIn variant="fadeInUp" delay={0.6} duration={0.8}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[96vw] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full max-w-[96vw] mx-auto px-4">
             {galleryImages.map((image, index) => (
               <motion.div
                 key={image.id}
