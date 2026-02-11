@@ -3,6 +3,7 @@ import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { getStructuredData } from "@/lib/structured-data";
+import { ChatWidget } from "@/components/ui/ChatWidget";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -74,6 +75,7 @@ export default function RootLayout({
       </head>
       <body className={`${bebasNeue.variable} antialiased`}>
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
