@@ -9,12 +9,9 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   const galleryImages = [
-    { id: 1, src: "/images/gallery-1.jpg", alt: "Premium barbershop experience" },
-    { id: 2, src: "/images/gallery-2.jpg", alt: "Skin fade haircut" },
-    { id: 3, src: "/images/gallery-3.jpg", alt: "Drop skin fade" },
-    { id: 4, src: "/images/gallery-4.jpg", alt: "Kids shadow fade comb over" },
-    { id: 5, src: "/images/gallery-5.jpg", alt: "Mid skin fade comb over" },
-    { id: 6, src: "/images/barbershop-interior.jpg", alt: "Redd's Barber Shop interior" },
+    { id: 1, src: "/images/gallery-1.jpg", alt: "Barbershop interior" },
+    { id: 2, src: "/images/gallery-2.jpg", alt: "Professional barber service" },
+    { id: 3, src: "/images/gallery-3.jpg", alt: "Premium barber experience" },
   ];
 
   return (
@@ -22,7 +19,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/barbershop-interior.jpg"
+          src="/images/hero-background.jpg"
           alt="Redd's Barber Shop Interior"
           fill
           priority
@@ -63,11 +60,11 @@ export function Hero() {
 
         {/* Gallery Grid */}
         <FadeIn variant="fadeInUp" delay={0.6} duration={0.8}>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {galleryImages.map((image, index) => (
               <motion.div
                 key={image.id}
-                className="relative aspect-square bg-background-secondary rounded-lg overflow-hidden border-2 border-primary-500/30 shadow-glow-red group cursor-pointer"
+                className="relative aspect-video bg-background-secondary rounded-lg overflow-hidden border-2 border-primary-500/30 shadow-glow-red group cursor-pointer"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}

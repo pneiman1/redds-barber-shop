@@ -1,6 +1,6 @@
 export const siteConfig = {
   business: {
-    name: "Redd's Barber Shop",
+    name: "Phil's Barber Shop",
     tagline: "Premium Grooming Experience",
     description: "Experience premium grooming services at San Diego's finest barbershop. Expert cuts, traditional shaves, and modern styling in a classic atmosphere.",
     address: {
